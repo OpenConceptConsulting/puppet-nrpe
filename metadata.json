@@ -1,0 +1,38 @@
+{
+  "name": "OpenConceptConsulting-nrpe",
+  "version": "0.1.0",
+  "author": "OpenConceptConsulting",
+  "summary": "Install and Configures NRPE.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/OpenConceptConsulting/puppet-nrpe",
+  "project_page": "https://github.com/OpenConceptConsulting/puppet-nrpe",
+  "issues_url": "https://github.com/OpenConceptConsulting/puppet-nrpe/issues",
+  "tags": ["monitoring","nagios","nrpe","shinken"],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease":[ "6.0", "7.0"]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease":[ "12.04", "14.04"]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": "3.x"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": "3.x"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 4.0.0 < 5.0.0"
+    }
+  ]
+}
+

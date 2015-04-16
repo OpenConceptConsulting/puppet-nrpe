@@ -1,0 +1,46 @@
+# This file is being managed by puppet
+# module 'shinken'
+
+log_facility=<%= @log_facility %>
+
+debug=<%= @debug_num %>
+
+pid_file=<%= @pid_file %>
+
+<% if @server_address -%>
+server_address=<%= @server_address %>
+<% end -%>
+server_port=<%= @server_port %>
+
+nrpe_user=<%= @user %>
+nrpe_group=<%= @group %>
+
+allowed_hosts=<%= @allowed_hosts.join(',') %>
+
+dont_blame_nrpe=<%= @dont_blame_nrpe_num %>
+
+connection_timeout=<%= @connection_timeout %>
+
+allow_weak_random_seed=<%= @allow_weak_random_seed_num %>
+
+<% if @command_prefix -%>
+command_prefix=<%= @command_prefix %>
+<% end -%>
+
+command_timeout=<%= @command_timeout %>
+
+<% if @supports_bash_substitution -%>
+allow_bash_command_substitution=<%= @allow_bash_command_substitution_num %>
+<% end -%>
+
+<% @include_files.each do |file| -%>
+include=<%= file %>
+<% end -%>
+<% @include_dirs.each do |dir| -%>
+include_dir=<%= dir %>
+<% end -%>
+
+<% @commands.each do |name, line| -%>
+command[<%= name %>]=<%= line %>
+<% end -%>
+
