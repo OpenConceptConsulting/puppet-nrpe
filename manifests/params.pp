@@ -23,7 +23,7 @@ class nrpe::params {
   $default_service_name = 'nagios-nrpe-server'
 
   case $::osfamily {
-    Debian: {
+    'Debian': {
       $log_facility  = 'daemon'
       $config        = $default_config
       $package_name  = $default_package_name
