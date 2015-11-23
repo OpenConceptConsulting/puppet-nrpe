@@ -38,7 +38,7 @@ class nrpe::params {
       ]
 
       case $::operatingsystem {
-        Debian: {
+        'Debian': {
           if $::operatingsystemmajrelease < 7 {
             $supports_bash_substitution = false
           } else {
