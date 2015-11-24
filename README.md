@@ -1,5 +1,7 @@
 # nrpe
 
+[![Build Status](https://travis-ci.org/OpenConceptConsulting/puppet-nrpe.svg?branch=master)](https://travis-ci.org/OpenConceptConsulting/puppet-nrpe)
+
 #### Table of Contents
 
 1. [Overview](#overview)
